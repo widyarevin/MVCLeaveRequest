@@ -52,4 +52,16 @@ public class MasterController {
         return "redirect:/";
     }
 
+    @PostMapping("approve/{id}")
+    public String approveMaster(@PathVariable int id){
+        masterService.approval(id);
+        return "redirect:/";
+    }
+
+    @PostMapping("reject/{id}")
+    public String rejectMaster(@PathVariable int id){
+        masterService.reject(id);
+        return "redirect:/";
+    }
+
 }

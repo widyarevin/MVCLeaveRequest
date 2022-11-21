@@ -24,7 +24,6 @@ public class UserServiceImpl implements  UserService{
         String encodedPassword = passwordEncoder.encode(dto.getPassword());
 
         userRepository.save(new User(dto.getFullName(), dto.getEmail(), encodedPassword,dto.getTotalLeave(), dto.getManagerId()));
-        System.out.println(dto.getFullName() + "namaa guaaa");
         return userRepository.findById(dto.getId()).isPresent();
     }
 }

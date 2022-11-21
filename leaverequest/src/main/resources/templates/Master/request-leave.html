@@ -37,7 +37,7 @@
     <div class="col-8">
       <form th:action="@{/save}" method="post" >
         <div class="mb-3">
-          <label  class="form-label">Nama</label>
+          <label  class="form-label">User ID</label>
           <input type="int" id="userId" name="userId" th:value="${userId}" class="form-control" placeholder="name@example.com">
         </div>
 
@@ -48,11 +48,6 @@
             <option th:each="category : ${categories}" th:value="${category.id}" th:text="${category.categoryName}"></option>
 
           </select>
-        </div>
-
-        <div class="mb-3">
-          <label  class="form-label">Submit Date</label>
-          <input type="date" th:value="${submitDate}" class="form-control" name="submitDate" >
         </div>
 
         <div class="mb-3">
@@ -71,10 +66,16 @@
         </div>
 
         <div class="mb-3">
+          <label  class="form-label">Submit Date</label>
+          <input type="date" th:value="${submitDate}" class="form-control" name="submitDate" >
+        </div>
+
+
+        <div class="mb-3">
           <select class="form-select" aria-label="Default select example" name="status">
             <option selected>Status</option>
             <option th:value="Approve" >Approve</option>
-            <option th:value="Reject">Reject</option>
+            <option th:value="Waiting">Waiting</option>
 
           </select>
         </div>

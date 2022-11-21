@@ -9,4 +9,7 @@ public interface MasterService {
     public boolean saveMaster(Master master);
     public Master findMasterById(int id);
     public boolean deleteMasterById(int id);
+    public boolean approval(int id);
+    public boolean reject(int id);
+
 }

@@ -33,12 +33,12 @@
         <thead>
         <tr>
             <th scope="col">Id</th>
-            <th scope="col">Nama </th>
+            <th scope="col">User Id </th>
             <th scope="col">Category</th>
-            <th scope="col">Submit Date</th>
             <th scope="col">Approval Date</th>
             <th scope="col">Start Date</th>
             <th scope="col">End Date</th>
+            <th scope="col">Submit Date</th>
             <th scope="col">Status </th>
             <th scope="col">Action </th>
         </tr>
@@ -48,17 +48,31 @@
             <th th:text="${master.id}" scope="row"></th>
             <td th:text="${master.userId}"></td>
             <td th:text="*{master.categoryId.categoryName}"></td>
-            <td th:text="${master.submitDate}"></td>
             <td th:text="${master.approvalDate}"></td>
             <td th:text="${master.startDate}"></td>
             <td th:text="${master.endDate}"></td>
+            <td th:text="${master.submitDate}"></td>
             <td th:text="${master.status}"></td>
             <td>
-                <a href="" class="text-primary">Edit</a> ||
-                <a href="" class="text-success">Approve</a>
-                <form th:action="@{delete/{id} (id = ${master.id})}" method="post">
-                    <input stretched-link class="btn btn-danger" type="submit" value="Delete">
-                </form>
+               <div class="row">
+                   <div class="col-sm-4">
+                       <form  th:action="@{approve/{id} (id = ${master.id})}" method="post" >
+                           <input stretched-link class="btn btn-success" type="submit" value="Approve">
+                       </form>
+                   </div>
+
+                   <div class="col-sm-3">
+                       <form th:action="@{reject/{id} (id = ${master.id})}" method="post" >
+                           <input stretched-link class="btn btn-warning text-white" type="submit" value="Reject">
+                       </form>
+                   </div>
+
+                   <div class="col-sm-3">
+                       <form th:action="@{delete/{id} (id = ${master.id})}" method="post">
+                           <input stretched-link class="btn btn-danger" type="submit" value="Delete">
+                       </form>
+                   </div>
+               </div>
             </td>
         </tr>
 
