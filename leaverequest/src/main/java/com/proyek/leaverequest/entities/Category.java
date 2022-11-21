@@ -13,7 +13,7 @@ public class Category {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String categoryName;
-    private  String totalDays;
+    private  int totalDays;
 
     public int getId() {
         return id;
@@ -31,11 +31,11 @@ public class Category {
         this.categoryName = categoryName;
     }
 
-    public String getTotalDays() {
+    public int getTotalDays() {
         return totalDays;
     }
 
-    public void setTotalDays(String totalDays) {
+    public void setTotalDays(int totalDays) {
         this.totalDays = totalDays;
     }
 }

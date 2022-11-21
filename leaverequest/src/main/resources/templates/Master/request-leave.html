@@ -38,7 +38,7 @@
       <form th:action="@{/save}" method="post" >
         <div class="mb-3">
           <label  class="form-label">User ID</label>
-          <input type="int" id="userId" name="userId" th:value="${userId}" class="form-control" placeholder="name@example.com">
+          <input type="int" id="userId" name="userId" th:value="${userId}" class="form-control" placeholder="Your ID">
         </div>
 
         <div class="mb-3">
@@ -60,25 +60,24 @@
           <input type="date" th:value="${endDate}" class="form-control" name="endDate" >
         </div>
 
-        <div class="mb-3">
-          <label  class="form-label">Approval Date</label>
-          <input type="date" th:value="${approvalDate}" class="form-control" name="approvalDate" >
-        </div>
+<!--        <div class="mb-3">-->
+<!--          <label  class="form-label">Approval Date</label>-->
+<!--          <input type="date" th:value="${approvalDate}" class="form-control" name="approvalDate" >-->
+<!--        </div>-->
 
-        <div class="mb-3">
-          <label  class="form-label">Submit Date</label>
-          <input type="date" th:value="${submitDate}" class="form-control" name="submitDate" >
-        </div>
+<!--        <div class="mb-3">-->
+<!--          <label  class="form-label">Submit Date</label>-->
+<!--          <input type="date" th:value="${submitDate}" class="form-control" name="submitDate" >-->
+<!--        </div>-->
 
 
-        <div class="mb-3">
-          <select class="form-select" aria-label="Default select example" name="status">
-            <option selected>Status</option>
-            <option th:value="Approve" >Approve</option>
-            <option th:value="Waiting">Waiting</option>
-
-          </select>
-        </div>
+<!--        <div class="mb-3">-->
+<!--          <select class="form-select" aria-label="Default select example" name="status">-->
+<!--            <option selected>Status</option>-->
+<!--            <option th:value="Approve" >Approve</option>-->
+<!--            <option th:value="Waiting">Waiting</option>-->
+<!--          </select>-->
+<!--        </div>-->
 
         <div class="mb-3">
           <input type="submit" class="form-control btn btn-primary" value="Submit" >
